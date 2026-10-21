@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Alterar Senha</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="pagina-senha">
+
+
+        <!-- ==========================================
+             CAIXA DE ALTERAÇÃO
+        =========================================== -->
+
+        <section class="caixa-senha">
+
+
+            <!-- ÍCONE -->
+
+            <div class="icone-senha">
+                🔐
+            </div>
+
+
+            <!-- TÍTULO -->
+
+            <h1>
+                ALTERAR SENHA
+            </h1>
+
+
+            <p class="descricao">
+                Crie uma nova senha de 4 números.
+            </p>
+
+
+            <!-- ======================================
+                 SENHA ATUAL
+            ======================================= -->
+
+            <label for="senhaAtual">
+                SENHA ATUAL
+            </label>
+
+            <input
+                type="password"
+                id="senhaAtual"
+                maxlength="4"
+                inputmode="numeric"
+                placeholder="••••"
+                autocomplete="off"
+            >
+
+
+            <!-- ======================================
+                 NOVA SENHA
+            ======================================= -->
+
+            <label for="novaSenha">
+                NOVA SENHA
+            </label>
+
+            <input
+                type="password"
+                id="novaSenha"
+                maxlength="4"
+                inputmode="numeric"
+                placeholder="••••"
+                autocomplete="off"
+            >
+
+
+            <!-- ======================================
+                 CONFIRMAR
+            ======================================= -->
+
+            <label for="confirmarSenha">
+                CONFIRMAR NOVA SENHA
+            </label>
+
+            <input
+                type="password"
+                id="confirmarSenha"
+                maxlength="4"
+                inputmode="numeric"
+                placeholder="••••"
+                autocomplete="off"
+            >
+
+
+            <!-- ======================================
+                 BOTÃO SALVAR
+            ======================================= -->
+
+            <button
+                class="botao-salvar"
+                onclick="salvarNovaSenha()"
+            >
+                SALVAR NOVA SENHA
+            </button>
+
+
+            <!-- MENSAGEM -->
+
+            <div
+                class="mensagem"
+                id="mensagem"
+            ></div>
+
+
+            <!-- ======================================
+                 VOLTAR
+            ======================================= -->
+
+            <a
+                href="index.html"
+                class="botao-voltar"
+            >
+                ← VOLTAR PARA O COFRE
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

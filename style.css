@@ -1,0 +1,1177 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #41494e,
+            #1c2023 50%,
+            #050606
+        );
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/* ==================================================
+   COFRE
+================================================== */
+
+.cofre {
+
+    position: relative;
+
+    width: 440px;
+
+    height: 620px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #737c81,
+            #343a3e,
+            #15191b
+        );
+
+    border: 6px solid #858e94;
+
+    box-shadow:
+
+        inset 0 0 30px
+        rgba(255,255,255,.08),
+
+        0 30px 80px
+        rgba(0,0,0,.8);
+
+}
+
+
+/* ==================================================
+   INTERIOR
+================================================== */
+
+.interior {
+
+    position: absolute;
+
+    inset: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #1d2921,
+            #07100a
+        );
+
+}
+
+
+.interior-conteudo {
+
+    text-align: center;
+
+    color: #35ff70;
+
+}
+
+
+.interior h2 {
+
+    font-size: 25px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 0 10px #35ff70;
+
+}
+
+
+.conteudo {
+
+    padding: 20px;
+
+    border: 2px solid #35ff70;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 15px
+        rgba(53,255,112,.3);
+
+}
+
+
+/* ==================================================
+   PORTA
+================================================== */
+
+.porta {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    border-radius: 22px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #687176,
+            #3e4549,
+            #1b1f21
+        );
+
+    border: 3px solid #8a9297;
+
+    transform-origin: left center;
+
+    transition:
+
+        transform 1.5s ease,
+
+        opacity .8s;
+
+    pointer-events: none;
+
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.logo {
+
+    position: absolute;
+
+    top: 35px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #e7ebed;
+
+    font-size: 34px;
+
+    font-weight: bold;
+
+    letter-spacing: 9px;
+
+    text-shadow:
+        0 3px 5px #000;
+
+}
+
+
+/* ==================================================
+   RODA
+================================================== */
+
+.roda {
+
+    position: absolute;
+
+    width: 145px;
+
+    height: 145px;
+
+    top: 39%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #15191b,
+            #080a0b 55%,
+            #343b40 57%,
+            #111315 72%
+        );
+
+    border: 8px solid #858d92;
+
+    box-shadow:
+        inset 0 0 20px #000;
+
+}
+
+
+.roda-centro {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 70px;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #4e575c,
+            #181c1e
+        );
+
+    border: 4px solid #929a9f;
+
+    font-size: 28px;
+
+}
+
+
+/* ==================================================
+   PARAFUSOS
+================================================== */
+
+.parafuso {
+
+    position: absolute;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #c0c5c7,
+            #555d61 55%,
+            #202426
+        );
+
+    border: 2px solid #171a1c;
+
+}
+
+
+.parafuso-1 {
+
+    top: 25px;
+
+    left: 25px;
+
+}
+
+
+.parafuso-2 {
+
+    top: 25px;
+
+    right: 25px;
+
+}
+
+
+.parafuso-3 {
+
+    bottom: 25px;
+
+    left: 25px;
+
+}
+
+
+.parafuso-4 {
+
+    bottom: 25px;
+
+    right: 25px;
+
+}
+
+
+/* ==================================================
+   PAINEL
+================================================== */
+
+.painel {
+
+    position: absolute;
+
+    z-index: 10;
+
+    width: 350px;
+
+    left: 50%;
+
+    bottom: 15px;
+
+    transform:
+        translateX(-50%);
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #1c2022,
+            #080a0b
+        );
+
+    border: 4px solid #080909;
+
+    box-shadow:
+
+        inset 0 0 20px #000,
+
+        0 8px 15px
+        rgba(0,0,0,.6);
+
+}
+
+
+.painel h1 {
+
+    text-align: center;
+
+    color: #dce1e4;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ==================================================
+   LED
+================================================== */
+
+.led {
+
+    width: 12px;
+
+    height: 12px;
+
+    margin:
+        0 auto 10px;
+
+    border-radius: 50%;
+
+    background: #ff2929;
+
+    box-shadow:
+        0 0 10px #ff2929;
+
+}
+
+
+.led.aberto {
+
+    background: #35ff70;
+
+    box-shadow:
+
+        0 0 10px #35ff70,
+
+        0 0 25px #35ff70;
+
+}
+
+
+.led.bloqueado {
+
+    background: #ff2020;
+
+    box-shadow:
+
+        0 0 10px #ff2020,
+
+        0 0 25px #ff2020;
+
+    animation:
+        piscar 1s infinite;
+
+}
+
+
+@keyframes piscar {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        opacity: .25;
+
+    }
+
+}
+
+
+/* ==================================================
+   DISPLAY
+================================================== */
+
+.display {
+
+    width: 100%;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 13px;
+
+    border-radius: 8px;
+
+    border: 3px solid #29352e;
+
+    background: #061009;
+
+    color: #35ff70;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 26px;
+
+    font-weight: bold;
+
+    letter-spacing: 7px;
+
+    text-shadow:
+        0 0 8px #35ff70;
+
+    box-shadow:
+        inset 0 0 15px #000;
+
+}
+
+
+.display.erro {
+
+    color: #ff3030;
+
+    border-color: #572020;
+
+    text-shadow:
+        0 0 8px #ff3030;
+
+}
+
+
+/* ==================================================
+   TECLADO
+================================================== */
+
+.teclado {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 7px;
+
+}
+
+
+.teclado button {
+
+    height: 43px;
+
+    border-radius: 8px;
+
+    border: 2px solid #737c82;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #687177,
+            #30363a
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 0 #101112;
+
+    transition: .1s;
+
+}
+
+
+.teclado button:hover {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #80898f,
+            #3d454a
+        );
+
+}
+
+
+.teclado button:active {
+
+    transform:
+        translateY(4px);
+
+    box-shadow:
+        0 0 0 #101112;
+
+}
+
+
+.limpar {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #a83a3a,
+            #551818
+        ) !important;
+
+}
+
+
+.confirmar {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #269950,
+            #104d29
+        ) !important;
+
+}
+
+
+/* ==================================================
+   TENTATIVAS
+================================================== */
+
+.tentativas {
+
+    margin-top: 8px;
+
+    text-align: center;
+
+    color: #9da5a9;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.tentativas span {
+
+    color: #ffca3a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+}
+
+
+/* ==================================================
+   STATUS
+================================================== */
+
+.status {
+
+    min-height: 15px;
+
+    margin-top: 8px;
+
+    text-align: center;
+
+    color: #8d9599;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==================================================
+   BOTÃO ALTERAR SENHA
+================================================== */
+
+.botao-config {
+
+    width: 100%;
+
+    height: 38px;
+
+    margin-top: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 2px solid #596269;
+
+    border-radius: 7px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #41494e,
+            #202528
+        );
+
+    color: #c9ced1;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+.botao-config:hover {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #596268,
+            #2e3539
+        );
+
+    color: white;
+
+}
+
+
+/* ==================================================
+   PORTA ABERTA
+================================================== */
+
+.cofre.aberto .porta {
+
+    transform:
+
+        perspective(1200px)
+        rotateY(-110deg);
+
+    opacity: 0;
+
+}
+
+
+/* ==================================================
+   ERRO
+================================================== */
+
+@keyframes tremer {
+
+    0% {
+        transform:
+            translateX(-50%);
+    }
+
+    20% {
+        transform:
+            translateX(
+                calc(-50% - 8px)
+            );
+    }
+
+    40% {
+        transform:
+            translateX(
+                calc(-50% + 8px)
+            );
+    }
+
+    60% {
+        transform:
+            translateX(
+                calc(-50% - 8px)
+            );
+    }
+
+    80% {
+        transform:
+            translateX(
+                calc(-50% + 8px)
+            );
+    }
+
+    100% {
+        transform:
+            translateX(-50%);
+    }
+
+}
+
+
+.cofre.erro .painel {
+
+    animation:
+        tremer .4s;
+
+}
+
+
+/* ==================================================
+   PÁGINA DE ALTERAÇÃO DE SENHA
+================================================== */
+
+.pagina-senha {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ==================================================
+   CAIXA DA SENHA
+================================================== */
+
+.caixa-senha {
+
+    width: 390px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #41494e,
+            #171b1d
+        );
+
+    border: 4px solid #737c81;
+
+    box-shadow:
+
+        inset 0 0 25px
+        rgba(0,0,0,.6),
+
+        0 25px 60px
+        rgba(0,0,0,.8);
+
+}
+
+
+/* ==================================================
+   ÍCONE
+================================================== */
+
+.icone-senha {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ==================================================
+   TÍTULO
+================================================== */
+
+.caixa-senha h1 {
+
+    color: #e5e9eb;
+
+    font-size: 24px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ==================================================
+   DESCRIÇÃO
+================================================== */
+
+.descricao {
+
+    color: #aeb5b9;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==================================================
+   LABELS
+================================================== */
+
+.caixa-senha label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    text-align: left;
+
+    color: #aeb5b9;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* ==================================================
+   INPUTS
+================================================== */
+
+.caixa-senha input {
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-bottom: 16px;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: 2px solid #596268;
+
+    outline: none;
+
+    background: #070909;
+
+    color: #35ff70;
+
+    text-align: center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 24px;
+
+    letter-spacing: 8px;
+
+}
+
+
+.caixa-senha input:focus {
+
+    border-color: #35ff70;
+
+    box-shadow:
+
+        0 0 12px
+        rgba(53,255,112,.3);
+
+}
+
+
+/* ==================================================
+   BOTÃO SALVAR
+================================================== */
+
+.botao-salvar {
+
+    width: 100%;
+
+    height: 50px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #269950,
+            #104d29
+        );
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.botao-salvar:hover {
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #35b961,
+            #176c39
+        );
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ==================================================
+   MENSAGEM
+================================================== */
+
+.mensagem {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+}
+
+
+.mensagem.erro {
+
+    color: #ff4b4b;
+
+}
+
+
+.mensagem.sucesso {
+
+    color: #35ff70;
+
+}
+
+
+/* ==================================================
+   VOLTAR
+================================================== */
+
+.botao-voltar {
+
+    display: block;
+
+    margin-top: 22px;
+
+    color: #9da5a9;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+}
+
+
+.botao-voltar:hover {
+
+    color: white;
+
+}
+
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media (max-width: 500px) {
+
+    body {
+
+        padding: 10px;
+
+    }
+
+
+    .cofre {
+
+        width: 95vw;
+
+        height: 600px;
+
+    }
+
+
+    .painel {
+
+        width: 88%;
+
+        padding: 15px;
+
+    }
+
+
+    .roda {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+    .roda-centro {
+
+        width: 60px;
+
+        height: 60px;
+
+    }
+
+
+    .logo {
+
+        font-size: 28px;
+
+    }
+
+
+    .caixa-senha {
+
+        width: 95%;
+
+        padding: 28px 22px;
+
+    }
+
+}
