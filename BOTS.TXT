@@ -1,0 +1,5 @@
+
+<!--quer me ver, mas n vai n-->
+
+User-agent: *
+Disallow: /

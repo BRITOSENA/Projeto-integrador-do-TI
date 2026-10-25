@@ -1,0 +1,135 @@
+/* ============================================================
+   COFRE — estilo Minecraft
+   Seções: base · título · painel · grade · resultado · inventário
+           botões · mensagem · tooltip · animações
+   ============================================================ */
+
+/* ---------- Base ---------- */
+:root{
+  color-scheme:only light;
+  --s:min(40px,9.4vw);                         /* tamanho de cada slot */
+  --p:calc(var(--s)*.4);                       /* margem interna do painel */
+  --w:calc(9*var(--s) + 2*var(--p) + 8px);     /* largura do painel */
+  --cinza:#c6c6c6;
+  --slot:#8b8b8b;
+  --escuro:#373737;
+  --sombra:#3f3f3f;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:grid; place-items:center; padding:24px 0;
+  font-family:"VT323","Courier New",monospace; font-size:22px; color:#fff;
+  background-color:#3a2815;
+  background-image:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect x='0' y='0' width='1' height='1' fill='%237a502b'/%3E%3Crect x='1' y='0' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='2' y='0' width='1' height='1' fill='%23503219'/%3E%3Crect x='3' y='0' width='1' height='1' fill='%236b4423'/%3E%3Crect x='4' y='0' width='1' height='1' fill='%236b4423'/%3E%3Crect x='5' y='0' width='1' height='1' fill='%2347301a'/%3E%3Crect x='6' y='0' width='1' height='1' fill='%236b4423'/%3E%3Crect x='7' y='0' width='1' height='1' fill='%237a502b'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%2347301a'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%236b4423'/%3E%3Crect x='2' y='1' width='1' height='1' fill='%2347301a'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='4' y='1' width='1' height='1' fill='%236b4423'/%3E%3Crect x='5' y='1' width='1' height='1' fill='%236b4423'/%3E%3Crect x='6' y='1' width='1' height='1' fill='%23503219'/%3E%3Crect x='7' y='1' width='1' height='1' fill='%23503219'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%236b4423'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%236b4423'/%3E%3Crect x='3' y='2' width='1' height='1' fill='%2347301a'/%3E%3Crect x='4' y='2' width='1' height='1' fill='%23503219'/%3E%3Crect x='5' y='2' width='1' height='1' fill='%236b4423'/%3E%3Crect x='6' y='2' width='1' height='1' fill='%2347301a'/%3E%3Crect x='7' y='2' width='1' height='1' fill='%236b4423'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%2347301a'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%236b4423'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%2347301a'/%3E%3Crect x='4' y='3' width='1' height='1' fill='%2347301a'/%3E%3Crect x='5' y='3' width='1' height='1' fill='%23503219'/%3E%3Crect x='6' y='3' width='1' height='1' fill='%236b4423'/%3E%3Crect x='7' y='3' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='0' y='4' width='1' height='1' fill='%236b4423'/%3E%3Crect x='1' y='4' width='1' height='1' fill='%2347301a'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%237a502b'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%23503219'/%3E%3Crect x='5' y='4' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='6' y='4' width='1' height='1' fill='%2347301a'/%3E%3Crect x='7' y='4' width='1' height='1' fill='%236b4423'/%3E%3Crect x='0' y='5' width='1' height='1' fill='%2347301a'/%3E%3Crect x='1' y='5' width='1' height='1' fill='%237a502b'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%2347301a'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%236b4423'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%2347301a'/%3E%3Crect x='6' y='5' width='1' height='1' fill='%2347301a'/%3E%3Crect x='7' y='5' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='0' y='6' width='1' height='1' fill='%237a502b'/%3E%3Crect x='1' y='6' width='1' height='1' fill='%236b4423'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%2347301a'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%236b4423'/%3E%3Crect x='4' y='6' width='1' height='1' fill='%2347301a'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%236b4423'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%2347301a'/%3E%3Crect x='7' y='6' width='1' height='1' fill='%235e3b1f'/%3E%3Crect x='0' y='7' width='1' height='1' fill='%23503219'/%3E%3Crect x='1' y='7' width='1' height='1' fill='%2347301a'/%3E%3Crect x='2' y='7' width='1' height='1' fill='%23503219'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%237a502b'/%3E%3Crect x='4' y='7' width='1' height='1' fill='%23503219'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%2347301a'/%3E%3Crect x='6' y='7' width='1' height='1' fill='%23503219'/%3E%3Crect x='7' y='7' width='1' height='1' fill='%237a502b'/%3E%3C/svg%3E");
+  background-size:auto,128px;
+}
+main{display:grid; justify-items:center}
+:focus-visible{outline:3px solid #000; outline-offset:1px}
+
+/* ---------- Título ---------- */
+.titulo{
+  margin:0 0 18px; font-size:56px; font-weight:400; letter-spacing:2px;
+  text-shadow:4px 4px 0 var(--sombra);
+}
+
+/* ---------- Painel ---------- */
+.painel{
+  width:var(--w); padding:var(--p);
+  background:var(--cinza); color:#404040;
+  border:4px solid; border-color:#fff #555 #555 #fff;
+  box-shadow:0 0 0 3px #000, 7px 7px 0 3px rgba(0,0,0,.45);
+}
+.topo{display:flex; justify-content:space-between; align-items:flex-start}
+h2{margin:0; font-weight:400; font-size:1em}
+.status{display:grid; justify-items:end; line-height:1.1}
+#estado{color:#555}
+#esp{font-size:.8em; color:#6a6a6a}
+body[data-esp="on"] #esp{color:#17703a}
+body[data-estado="trancado"] #estado{color:#7a4e00}
+body[data-estado="aberto"] #estado{color:#17703a}
+
+/* ---------- Slots (base de tudo) ---------- */
+.slot{
+  position:relative; width:var(--s); height:var(--s); padding:0; border:0; font:inherit;
+  display:grid; place-items:center; background:var(--slot);
+  box-shadow:inset 2px 2px 0 var(--escuro), inset -2px -2px 0 #fff;
+}
+
+/* ---------- Grade de craft (a senha) ---------- */
+.craft{
+  display:flex; align-items:center; justify-content:space-between;
+  margin:6px calc(var(--s)*.2) 16px;
+}
+.grade{position:relative; display:grid; grid-template-columns:repeat(3,var(--s))}
+.grade .slot{
+  cursor:pointer;
+}
+.grade .slot:hover::before, .slot.item:hover::before{
+  content:""; position:absolute; inset:0; background:rgba(255,255,255,.35);
+}
+.slot.sel{z-index:1; box-shadow:inset 2px 2px 0 var(--escuro), inset -2px -2px 0 #fff, 0 0 0 3px #000}
+
+.livro{
+  width:calc(var(--s)*1.1); height:calc(var(--s)*1.1); padding:0; cursor:pointer;
+  background:#4aa84a; border:3px solid #1d5a1d;
+  box-shadow:inset 2px 2px 0 #8fdc8f, inset -2px -2px 0 #2d7a2d;
+}
+
+/* ---------- Resultado (seta + slot da chave) ---------- */
+.seta{
+  width:calc(var(--s)*1.3); height:calc(var(--s)*.9); background:var(--slot);
+  clip-path:polygon(0 35%,60% 35%,60% 5%,100% 50%,60% 95%,60% 65%,0 65%);
+}
+.saida{width:calc(var(--s)*1.6); height:calc(var(--s)*1.6)}
+.saida:enabled, .item-chave{cursor:pointer}
+.saida:enabled:hover, .item-chave:hover{background:rgba(255,255,255,.45)}
+.slot svg{width:80%; height:80%; filter:drop-shadow(2px 2px 0 rgba(0,0,0,.35))}
+.item-chave{
+  position:relative; width:100%; height:100%; padding:0; border:0; background:none;
+  display:grid; place-items:center;
+}
+
+/* ---------- Item que segue o mouse ---------- */
+.flutuante{
+  display:none; position:fixed; left:0; top:0; z-index:50; pointer-events:none;
+  width:calc(var(--s)*.9); height:calc(var(--s)*.9);
+}
+.flutuante svg{width:100%; height:100%; filter:drop-shadow(2px 2px 0 rgba(0,0,0,.45))}
+
+/* ---------- Inventário ---------- */
+.inv{display:grid; grid-template-columns:repeat(9,var(--s))}
+#hotbar{margin-top:calc(var(--s)*.15)}
+
+/* ---------- Botões ---------- */
+.botoes{display:flex; gap:8px; width:var(--w); margin-top:16px}
+.mc-btn{
+  flex:1; padding:8px; font:inherit; color:#fff; cursor:pointer;
+  background:#6f6f6f; border:2px solid #000; text-shadow:2px 2px 0 var(--sombra);
+  box-shadow:inset 2px 2px 0 #a8a8a8, inset -2px -2px 0 #3c3c3c;
+}
+.mc-btn.pequeno{flex:0 0 32%}
+.mc-btn:hover:enabled{background:#7c88c9}
+.mc-btn:disabled{opacity:.6; cursor:default}
+
+/* ---------- Mensagem (estilo chat) ---------- */
+#msg{
+  width:var(--w); min-height:3em; margin:14px 0 0; padding:8px 12px;
+  background:rgba(0,0,0,.55); text-align:center; text-shadow:2px 2px 0 var(--sombra);
+}
+#msg.ok{color:#7bff9a}
+#msg.erro{color:#ff7d75}
+
+/* ---------- Tooltip dos itens ---------- */
+[data-nome]:hover::after{
+  content:attr(data-nome); position:absolute; left:50%; bottom:calc(100% + 6px);
+  transform:translateX(-50%); white-space:nowrap; z-index:5; pointer-events:none;
+  padding:4px 10px; color:#fff; background:#100010; border:2px solid #2a0a5e;
+  text-shadow:2px 2px 0 var(--sombra);
+}
+
+/* ---------- Animações ---------- */
+.slot svg{animation:pop .25s}
+.tremer{animation:tremer .3s}
+@keyframes pop{from{transform:scale(.4)}to{transform:scale(1)}}
+@keyframes tremer{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+@media (prefers-reduced-motion:reduce){.slot svg, .tremer{animation:none}}
